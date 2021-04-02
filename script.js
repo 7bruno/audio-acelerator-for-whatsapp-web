@@ -31,15 +31,12 @@ const interval = setInterval(() => {
 
     document.addEventListener("click", () => {
       actualSpeed = parseFloat(button.innerText.split(" ", 1)[0]);
-      console.log("pane", actualSpeed);
       const interval2 = setInterval(() => {
         const audios = document.querySelectorAll("audio");
-        console.log(audios);
         if (audios || interval2 == 2000) {
           clearInterval(interval2);
           audios.forEach((element) => {
             element.playbackRate = actualSpeed;
-            console.log(element.playbackRate);
           }, 50);
         }
       });
