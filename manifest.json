@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "audio acelerator",
+  "description": "speeds up your whatsapp web audios for you",
+  "author": "Bruno alexandre Gomes de souza",
+  "browser_action": {
+    "default_title": "audio acelerator",
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts":[
+    {
+      "matches":["https://web.whatsapp.com/"],
+      "css":["style.css"],
+      "js":["script.js"]
+    }
+  ]
+}
